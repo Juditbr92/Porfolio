@@ -10,7 +10,7 @@ function Flags(){
         
             <div>
                 <a href="https://tailwindcss.com/docs/place-self">
-                    <img className= "h-10 w-10" src="/bandera.png" alt="Español" />
+                    <img className= "h-6 w-10" src='\Bandera_de_España.svg.webp' alt="Español" />
                 </a>
             </div>
         </div>
