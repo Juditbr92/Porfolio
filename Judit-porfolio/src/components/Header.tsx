@@ -1,11 +1,14 @@
-import { useContext } from "react"
+import { useContext, useState } from "react"
 import Flags from "./Flags"
 import Mode from "./Mode"
 import { ThemeContext } from "../context/ThemeProvider"
+import { RxHamburgerMenu } from "react-icons/rx"
+import Sidebar from "./Sidebar"
 
 function Header(){
 
     const { theme } = useContext(ThemeContext)
+    const [isOpen, setIsOpen ] = useState(false)
 
     return(
         <div>
@@ -16,9 +19,14 @@ function Header(){
                         <Flags />
                     </div>
 
-                    <div className="absolute top-6 right-6 ">
+                    <div className="absolute top-6 right-16 flex gap-12">
                         <Mode />
+                        <button 
+                            className="hover:cursor-pointer text-xl"
+                            onClick={() => setIsOpen(!isOpen)}><RxHamburgerMenu/> </button>
+                            {isOpen && <Sidebar isOpen={isOpen} />}
                     </div>
+
                 </div>
                 }
             
@@ -29,8 +37,12 @@ function Header(){
                         <Flags />
                     </div>
 
-                    <div className="absolute top-6 right-6 ">
+                    <div className="absolute top-6 right-16 flex gap-12">
                         <Mode />
+                        <button 
+                            className="hover:cursor-pointer text-xl text-white"
+                            onClick={() => setIsOpen(!isOpen)}><RxHamburgerMenu/> </button>
+                            {isOpen && <Sidebar isOpen={isOpen} />}
                     </div>
                 </div>
         }

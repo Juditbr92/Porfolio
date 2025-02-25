@@ -7,11 +7,13 @@ function App() {
   
 
   return (
-    <ThemeProvider>
-      <div>
-        <Header />
-      </div>
-    </ThemeProvider>
+      <ThemeProvider>
+        <div>
+          <Header />
+        </div>
+      </ThemeProvider>
+    
+      
       
     
   )
