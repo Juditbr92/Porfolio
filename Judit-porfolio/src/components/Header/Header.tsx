@@ -1,7 +1,7 @@
 import { useContext, useState } from "react"
 import Flags from "./Flags"
 import Mode from "./Mode"
-import { ThemeContext } from "../context/ThemeProvider"
+import { ThemeContext } from "../../context/ThemeProvider"
 import { RxHamburgerMenu } from "react-icons/rx"
 import Sidebar from "./Sidebar"
 
@@ -24,7 +24,7 @@ function Header(){
                         <button 
                             className="hover:cursor-pointer text-xl"
                             onClick={() => setIsOpen(!isOpen)}><RxHamburgerMenu/> </button>
-                            {isOpen && <Sidebar isOpen={isOpen} />}
+                            {isOpen && <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />}
                     </div>
 
                 </div>
@@ -42,7 +42,7 @@ function Header(){
                         <button 
                             className="hover:cursor-pointer text-xl text-white"
                             onClick={() => setIsOpen(!isOpen)}><RxHamburgerMenu/> </button>
-                            {isOpen && <Sidebar isOpen={isOpen} />}
+                            {isOpen && <Sidebar isOpen={isOpen} setIsOpen={setIsOpen}/>}
                     </div>
                 </div>
         }

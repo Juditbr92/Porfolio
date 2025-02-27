@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { motion } from "framer-motion";
 import { FaRegLightbulb } from "react-icons/fa6";
 import { IoMdMoon } from "react-icons/io";
-import { ThemeContext } from "../context/ThemeProvider";
+import { ThemeContext } from "../../context/ThemeProvider";
 
 
 function Mode() {
