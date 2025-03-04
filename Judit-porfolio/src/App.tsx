@@ -9,7 +9,7 @@ function App() {
   const { theme } = useContext(ThemeContext)
 
   return (
-        <div className="absolute z-20">
+        <div>
         {/* Fondo para modo light */}
           {theme === 'light' && 
             <div className="fixed inset-0 z-0 h-full w-full bg-[#fafafa]">
@@ -25,9 +25,12 @@ function App() {
           }
 
           {/* Contenido de la APP */}
-          <div className="relative z-10 flex flex-col min-h-screen">
+          <div className="relative z-10 flex-grow flex-col">
             <Header /> 
           
+            <div className='flex-grow'>
+              {/* <Main></Main> */}
+            </div>
             <Footer/>
           </div>
           

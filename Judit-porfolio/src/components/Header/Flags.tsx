@@ -1,17 +1,26 @@
+import { useContext } from "react"
+import { LanguageContext } from "../../context/LanguageContext"
+
 function Flags(){
+
+    const {changeSpanish, changeEnglish } = useContext(LanguageContext)
+
+    if(!LanguageContext){
+        throw new Error("Language must be used inside a LanguageProvider")
+    }
 
     return(
         <div className="absolute top-6 left-6 flex items-center gap-4">
             <div>
-                <a href="https://sharon-yi.com/#projects">
+                <button onClick={changeEnglish}>
                     <img className= "h-6 w-10" src="/Uk flag.png" alt="English" />
-                </a>
+                </button>
             </div>
         
             <div>
-                <a href="https://tailwindcss.com/docs/place-self">
+                <button onClick={changeSpanish}>
                     <img className= "h-6 w-10" src='\Bandera_de_España.svg.webp' alt="Español" />
-                </a>
+                </button>
             </div>
         </div>
         )
