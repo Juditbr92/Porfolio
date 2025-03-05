@@ -12,15 +12,15 @@ function Footer(){
     return(
         <div className="h-16 w-full">
             {theme === 'light' && language === 'spanish' && (
-                <div className="h-12 w-full bg-blue-200 flex items-center justify-center">
-                    <h1>Desarrollado por Judit 😊</h1>
+                <div className="h-16 w-full bg-blue-200 flex items-center justify-center">
+                    <h2>Desarrollado por Judit 😊</h2>
                 </div>
             )
             }
 
             {theme === 'dark' && language === 'spanish' &&(
-                <div className="h-12 w-full bg-transparent text-white flex items-center justify-center">
-                    <h1>Desarrollado por Judit 😊</h1>
+                <div className="h-16 w-full bg-transparent text-white flex items-center justify-center">
+                    <h2>Desarrollado por Judit 😊</h2>
                 </div> 
             )
             }
@@ -28,15 +28,15 @@ function Footer(){
             {/* English version */}
 
             {theme === 'light' && language === 'english' && (
-                <div className="h-12 w-full bg-blue-200 flex items-center justify-center">
-                    <h1>Developed by Judit 😊</h1>
+                <div className="h-16 w-full bg-blue-200 flex items-center justify-center">
+                    <h2>Developed by Judit 😊</h2>
                 </div>
                 )
             }
 
             {theme === 'dark' && language === 'english' && (
-                <div className="h-12 w-full bg-transparent text-white flex items-center justify-center">
-                    <h1>Developed by Judit 😊</h1>
+                <div className="h-16 w-full bg-transparent text-white flex items-center justify-center">
+                    <h2>Developed by Judit 😊</h2>
                 </div>
                 )
             }

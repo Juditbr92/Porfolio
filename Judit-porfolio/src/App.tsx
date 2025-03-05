@@ -3,6 +3,7 @@ import './App.css'
 import Footer from './components/Footer/Footer'
 import Header from './components/Header/Header'
 import { ThemeContext } from './context/ThemeProvider'
+import IntroPage from './pages/IntroPage'
 
 
 function App() {
@@ -24,13 +25,15 @@ function App() {
                 </div>
           }
 
-          {/* Contenido de la APP */}
-          <div className="relative z-10 flex-grow flex-col">
+          {/* Contenido de la APP */} 
+          <div className="relative z-10 flex flex-col min-h-screen">
             <Header /> 
           
-            <div className='flex-grow'>
-              {/* <Main></Main> */}
+          {/* Main part of the APP */}
+            <div className='flex flex-grow items-center justify-center mt-12'>
+              <IntroPage />
             </div>
+            
             <Footer/>
           </div>
           

@@ -7,4 +7,13 @@
     font-family: "Poppins", serif;
     font-weight: 400;
     font-style: normal;
+    font-stretch: expanded;
+}
+
+h1{
+    font-family: "Chewy", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(35, 119, 230);
+    font-size: xxx-large
 }
