@@ -10,25 +10,35 @@ function Footer(){
 
 
     return(
-        <div className="h-16 w-full ">
-            {theme === 'light' && 
-                <div className="h-12 w-full bg-blue-200">
-                    <h1>Desarrollado por Judit</h1>
+        <div className="h-16 w-full">
+            {theme === 'light' && language === 'spanish' && (
+                <div className="h-12 w-full bg-blue-200 flex items-center justify-center">
+                    <h1>Desarrollado por Judit 😊</h1>
                 </div>
+            )
             }
 
-            {theme === 'dark' && 
-                <div className="h-12 w-full bg-transparent text-white">
-                <h1>Desarrollado por Judit</h1>
-            </div>
+            {theme === 'dark' && language === 'spanish' &&(
+                <div className="h-12 w-full bg-transparent text-white flex items-center justify-center">
+                    <h1>Desarrollado por Judit 😊</h1>
+                </div> 
+            )
             }
 
-            {language === 'spanish' &&
-                <h1>HOLA MUNDO!!</h1>
+            {/* English version */}
+
+            {theme === 'light' && language === 'english' && (
+                <div className="h-12 w-full bg-blue-200 flex items-center justify-center">
+                    <h1>Developed by Judit 😊</h1>
+                </div>
+                )
             }
 
-            {language === 'english' && 
-                <h1>HELLO WORLD!!</h1>
+            {theme === 'dark' && language === 'english' && (
+                <div className="h-12 w-full bg-transparent text-white flex items-center justify-center">
+                    <h1>Developed by Judit 😊</h1>
+                </div>
+                )
             }
         </div>
     )
