@@ -14,15 +14,21 @@ function Intro(){
 
             {/* Spanish and light */}
             {language === 'spanish' && theme==='light' && (
-                <div className="flex w-3/4 items-center justify-between">
-                    <div className="text-left text-black">
-                        <h1>Hola! Soy Judit 👋</h1>
-                        <h3>Soy una apasionada del desarrollo web que inició su camino de forma autodidacta. <br />
-                            Tras una carrera en el mundo de la fisioterapia, <br /> ahora busco desarrollar todo mi potencial en el ámbito tecnológico!</h3>
+                <div className="flex flex-col w-3/4 items-center gap-y-12">
+                    <div className="flex justify-between items-center w-full">
+                        <div className="text-left text-black">
+                            <h1>Hola! Soy Judit 👋</h1>
+                            <h3>Soy una apasionada del desarrollo web que inició su camino de forma autodidacta. <br />
+                                Tras una carrera en el mundo de la fisioterapia, <br /> ahora busco desarrollar todo mi potencial en el ámbito tecnológico!</h3>
+                        </div>
+                        <div className="flex justify-items-end w-1/4">
+                            <img src="\myAvatar.svg" alt="Foto de avatar" className={imgClasses}/>
+                        </div>
                     </div>
-                    <div className="flex justify-items-end w-1/3">
-                        <img src="\myAvatar.svg" alt="Foto de avatar" className={imgClasses}/>
-                    </div>
+
+                    <button className=" text-black rounded-xl p-2 hover:bg-blue-300 hover:text-white">
+                        <a href="">Ver proyectos</a>
+                    </button>
                 </div>
                 
             )}
@@ -30,15 +36,21 @@ function Intro(){
             {/* Spanish and dark mode */}
 
             {language === 'spanish' && theme==='dark' && (
-                <div className="flex w-3/4 items-center justify-between">
-                    <div className="text-left text-white">
-                        <h1>Hola! Soy Judit 👋</h1>
-                        <h3>Soy una apasionada del desarrollo web que inició su camino de forma autodidacta. <br />
-                            Tras una carrera en el mundo de la fisioterapia, <br /> ahora busco desarrollar todo mi potencial en el ámbito tecnológico!</h3>
+                <div className="flex flex-col w-3/4 items-center gap-y-12">
+                    <div className="flex justify-between items-center w-full">
+                        <div className="text-left text-white">
+                            <h1>Hola! Soy Judit 👋</h1>
+                            <h3>Soy una apasionada del desarrollo web que inició su camino de forma autodidacta. <br />
+                                Tras una carrera en el mundo de la fisioterapia, <br /> ahora busco desarrollar todo mi potencial en el ámbito tecnológico!</h3>
+                        </div>
+                        <div className="flex justify-items-end w-1/4">
+                            <img src="\myAvatar.svg" alt="Foto de avatar" className={imgClasses}/>
+                        </div>
                     </div>
-                    <div className="flex justify-items-end w-1/3">
-                        <img src="\myAvatar.svg" alt="Foto de avatar" className={imgClasses}/>
-                    </div>
+
+                    <button className=" text-white rounded-xl p-2 hover:bg-gray-300 hover:text-black">
+                        <a href="">Ver proyectos</a>
+                    </button>
                 </div>
                 
             )}
@@ -46,15 +58,21 @@ function Intro(){
             {/* English and light */}
 
             {language === 'english' && theme==='light' && (
-                <div className="flex w-3/4 items-center justify-between">
-                    <div className="text-left text-black">
-                        <h1>Hi! I'm Judit 👋</h1>
-                        <h3>I am passionate self-tought web developer<br />
+                <div className="flex flex-col w-3/4 items-center gap-y-12">
+                    <div className="flex justify-between items-center w-full">
+                        <div className="text-left text-black">
+                            <h1>Hi! I'm Judit 👋</h1>
+                            <h3>I am passionate self-taught web developer<br />
                             After a successful career in physiotherapy, <br /> I now aim to develop my full potential in the technological field!</h3>
+                        </div>
+                        <div className="flex justify-items-end w-1/3">
+                            <img src="\myAvatar.svg" alt="Foto de avatar" className={imgClasses}/>
+                        </div>
                     </div>
-                    <div className="flex justify-items-end w-1/3">
-                        <img src="\myAvatar.svg" alt="Foto de avatar" className={imgClasses}/>
-                    </div>
+
+                    <button className=" text-black rounded-xl p-2 hover:bg-blue-300 hover:text-white">
+                        <a href="">Check my projects!</a>
+                    </button>
                 </div>
                 
             )}
@@ -62,15 +80,21 @@ function Intro(){
              {/* English and dark */}
 
             {language === 'english' && theme==='dark' && (
-                <div className="flex w-3/4 items-center justify-between">
-                    <div className="text-left text-white">
-                        <h1>Hi! I'm Judit 👋</h1>
-                        <h3>I am passionate self-tought web developer<br />
+                <div className="flex flex-col w-3/4 items-center gap-y-12">
+                    <div className="flex justify-between items-center w-full">
+                        <div className="text-left text-white">
+                            <h1>Hi! I'm Judit 👋</h1>
+                            <h3>I am passionate self-taught web developer<br />
                             After a successful career in physiotherapy, <br /> I now aim to develop my full potential in the technological field!</h3>
+                        </div>
+                        <div className="flex justify-items-end w-1/3">
+                            <img src="\myAvatar.svg" alt="Foto de avatar" className={imgClasses}/>
+                        </div>
                     </div>
-                    <div className="flex justify-items-end w-1/3">
-                        <img src="\myAvatar.svg" alt="Foto de avatar" className={imgClasses}/>
-                    </div>
+
+                    <button className=" text-white rounded-xl p-2 hover:bg-gray-300 hover:text-black">
+                        <a href="">Check my projects!</a>
+                    </button>
                 </div>
                 
             )}

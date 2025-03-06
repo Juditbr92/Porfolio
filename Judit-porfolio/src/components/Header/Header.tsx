@@ -11,7 +11,7 @@ function Header(){
     const [isOpen, setIsOpen ] = useState(false)
 
     return(
-        <div className="fixed top-0 left-0 w-full z-20 p-4 shadow-md ">
+        <div className="fixed top-0 left-0 w-full z-20 shadow-md ">
             {theme === 'light' && 
                 <div>
                     <div>

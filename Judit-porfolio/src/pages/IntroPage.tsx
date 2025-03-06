@@ -2,8 +2,6 @@ import Intro from "../components/Intro"
 
 
 function IntroPage(){
-    
-
 
     return( 
         <div>
