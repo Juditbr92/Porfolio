@@ -1,107 +1,47 @@
-import { useContext } from "react"
-import { LanguageContext } from "../context/LanguageContext"
-import { ThemeContext } from "../context/ThemeProvider"
+type IntroProps = {
+    language: 'spanish' | 'english';
+    theme: 'dark' | 'light'
+}
 
-function Intro(){
 
-    const { language } = useContext(LanguageContext)
-    const { theme } = useContext(ThemeContext)
+function Intro({language, theme}: IntroProps){
 
+    const isDark = theme === 'dark'
+    const isSpanish = language === 'spanish'
+    const textColor = isDark ? 'text-white' : 'text-black'
+    const btnHover = isDark ? "hover:bg-gray-300 hover:text-black" : "hover:bg-blue-300 hover:text-white"
+    const text = isSpanish ? {
+        heading: "Hola! Soy Judit 👋",
+        description:
+            "Soy una apasionada del desarrollo web que inició su camino de forma autodidacta. \nTras una carrera en el mundo de la fisioterapia, \nahora busco desarrollar todo mi potencial en el ámbito tecnológico!",
+        button: "Ver proyectos",
+    } : {
+        heading: "Hi! I'm Judit 👋",
+        description:
+            "I am a passionate self-taught web developer. \nAfter a successful career in physiotherapy, \nI now aim to develop my full potential in the technological field!",
+        button: "Check my projects!",
+    }
     const imgClasses = "w-full border-2 rounded-full border-blue-400 bg-blue-200 ml-12 place-self-end"
 
     return( 
         <div className="h-[80vh] flex items-center justify-center">
-
-            {/* Spanish and light */}
-            {language === 'spanish' && theme==='light' && (
-                <div className="flex flex-col w-3/4 items-center gap-y-12">
-                    <div className="flex justify-between items-center w-full">
-                        <div className="text-left text-black">
-                            <h1>Hola! Soy Judit 👋</h1>
-                            <h3>Soy una apasionada del desarrollo web que inició su camino de forma autodidacta. <br />
-                                Tras una carrera en el mundo de la fisioterapia, <br /> ahora busco desarrollar todo mi potencial en el ámbito tecnológico!</h3>
-                        </div>
-                        <div className="flex justify-items-end w-1/4">
-                            <img src="\myAvatar.svg" alt="Foto de avatar" className={imgClasses}/>
-                        </div>
+            <div className="flex flex-col w-3/4 items-center gap-y-12">
+                <div className="flex justify-between items-center w-full">
+                    <div className={`text-left ${textColor}`}>
+                        <h1>{text.heading}</h1>
+                        <h3 className="whitespace-pre-line">{text.description}</h3>
                     </div>
-
-                    <button className=" text-black rounded-xl p-2 hover:bg-blue-300 hover:text-white">
-                        <a href="">Ver proyectos</a>
-                    </button>
-                </div>
-                
-            )}
-
-            {/* Spanish and dark mode */}
-
-            {language === 'spanish' && theme==='dark' && (
-                <div className="flex flex-col w-3/4 items-center gap-y-12">
-                    <div className="flex justify-between items-center w-full">
-                        <div className="text-left text-white">
-                            <h1>Hola! Soy Judit 👋</h1>
-                            <h3>Soy una apasionada del desarrollo web que inició su camino de forma autodidacta. <br />
-                                Tras una carrera en el mundo de la fisioterapia, <br /> ahora busco desarrollar todo mi potencial en el ámbito tecnológico!</h3>
-                        </div>
-                        <div className="flex justify-items-end w-1/4">
-                            <img src="\myAvatar.svg" alt="Foto de avatar" className={imgClasses}/>
-                        </div>
+                    <div className="flex justify-items-end w-1/4">
+                        <img src="\myAvatar.svg" alt="Foto de avatar" className={imgClasses}/>
                     </div>
-
-                    <button className=" text-white rounded-xl p-2 hover:bg-gray-300 hover:text-black">
-                        <a href="">Ver proyectos</a>
-                    </button>
                 </div>
-                
-            )}
-
-            {/* English and light */}
-
-            {language === 'english' && theme==='light' && (
-                <div className="flex flex-col w-3/4 items-center gap-y-12">
-                    <div className="flex justify-between items-center w-full">
-                        <div className="text-left text-black">
-                            <h1>Hi! I'm Judit 👋</h1>
-                            <h3>I am passionate self-taught web developer<br />
-                            After a successful career in physiotherapy, <br /> I now aim to develop my full potential in the technological field!</h3>
-                        </div>
-                        <div className="flex justify-items-end w-1/3">
-                            <img src="\myAvatar.svg" alt="Foto de avatar" className={imgClasses}/>
-                        </div>
-                    </div>
-
-                    <button className=" text-black rounded-xl p-2 hover:bg-blue-300 hover:text-white">
-                        <a href="">Check my projects!</a>
-                    </button>
-                </div>
-                
-            )}
-
-             {/* English and dark */}
-
-            {language === 'english' && theme==='dark' && (
-                <div className="flex flex-col w-3/4 items-center gap-y-12">
-                    <div className="flex justify-between items-center w-full">
-                        <div className="text-left text-white">
-                            <h1>Hi! I'm Judit 👋</h1>
-                            <h3>I am passionate self-taught web developer<br />
-                            After a successful career in physiotherapy, <br /> I now aim to develop my full potential in the technological field!</h3>
-                        </div>
-                        <div className="flex justify-items-end w-1/3">
-                            <img src="\myAvatar.svg" alt="Foto de avatar" className={imgClasses}/>
-                        </div>
-                    </div>
-
-                    <button className=" text-white rounded-xl p-2 hover:bg-gray-300 hover:text-black">
-                        <a href="">Check my projects!</a>
-                    </button>
-                </div>
-                
-            )}
-            
-            
+                <button className={`text-white rounded-xl p-2 ${btnHover}`}>
+                    <a href="">{text.button}</a>
+                </button>
+            </div>
         </div>
-    )
+    );
 }
+    
 
 export default Intro
