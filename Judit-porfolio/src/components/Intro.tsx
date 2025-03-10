@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 type IntroProps = {
     language: 'spanish' | 'english';
     theme: 'dark' | 'light'
@@ -10,6 +12,7 @@ function Intro({language, theme}: IntroProps){
     const isSpanish = language === 'spanish'
     const textColor = isDark ? 'text-white' : 'text-black'
     const btnHover = isDark ? "hover:bg-gray-300 hover:text-black" : "hover:bg-blue-300 hover:text-white"
+    const btn = isDark ? "text-white rounded-xl p-2" : "text-black rounded-xl p-2"
     const text = isSpanish ? {
         heading: "Hola! Soy Judit 👋",
         description:
@@ -35,8 +38,8 @@ function Intro({language, theme}: IntroProps){
                         <img src="\myAvatar.svg" alt="Foto de avatar" className={imgClasses}/>
                     </div>
                 </div>
-                <button className={`text-white rounded-xl p-2 ${btnHover}`}>
-                    <a href="">{text.button}</a>
+                <button className={`${btn} ${btnHover}`}>
+                    <NavLink to='/projects'>{text.button}</NavLink>
                 </button>
             </div>
         </div>
