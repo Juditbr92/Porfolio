@@ -17,7 +17,7 @@ function ProjectsPage(){
         "A community focused on video games, where you can create your own profile to upload videos of your best plays and comment on posts from other members. You can also use the threads section to solve your doubs and to start a game with members of the community!",
         technology: ["Angular", "Bootstrap", "MySQL"],
         gitHub: "https://github.com/tony1693/xpergg-front",
-        video: "https://www.youtube.com/watch?v=QH0t_ogClhA&ab_channel=ADHDFocusClub%F0%9F%92%AD"
+        video: "https://youtu.be/DcgEn2Jz-bE"
     };
 
     const projectMyBookShelf = {
@@ -26,7 +26,7 @@ function ProjectsPage(){
         description: language === 'spanish' ? "Aplicación para organizar y guardar tus lecturas. Puntúa los libros y guarda tus notas para revisar siempre que quieras" : "A desktop app to organize and save all your reads. Rate your books and keep track of them for whenever you want to revisit",
         technology: ["React", "Tailwind", "MySQL"],
         gitHub: "https://github.com/Juditbr92/MyBookShelf",
-        video: "https://www.youtube.com/watch?v=QH0t_ogClhA&ab_channel=ADHDFocusClub%F0%9F%92%AD"
+        video: "https://youtu.be/Oyz7XCswoqY"
     }
 
 
