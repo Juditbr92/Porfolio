@@ -4,9 +4,8 @@ import Footer from './components/Footer/Footer'
 import Header from './components/Header/Header'
 import { ThemeContext } from './context/ThemeProvider'
 import IntroPage from './pages/IntroPage'
-// import ProjectsPages from './pages/ProjectsPage'
 import { Route, Routes } from 'react-router-dom'
-import ProjectCard from './components/ProjectCard'
+import ProjectsPage from './pages/ProjectsPage'
 
 
 function App() {
@@ -37,7 +36,7 @@ function App() {
             <div className='flex flex-grow items-center justify-center mt-12'></div>
             <Routes>
               <Route path='/' element= {<IntroPage />}  />
-              <Route path= '/projects' element = {<ProjectCard />} />
+              <Route path= '/projects' element = {<ProjectsPage />} />
 
             </Routes>
             
