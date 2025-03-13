@@ -8,4 +8,5 @@ type ProjectTypes = {
     video: string
 }
 
+
 export default ProjectTypes

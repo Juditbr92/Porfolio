@@ -6,7 +6,8 @@ import { ThemeContext } from './context/ThemeProvider'
 import IntroPage from './pages/IntroPage'
 import { Route, Routes } from 'react-router-dom'
 import ProjectsPage from './pages/ProjectsPage'
-import About from './components/About'
+import AboutPage from './pages/AboutPage'
+import ToolkitPage from './pages/ToolkitPage'
 
 
 function App() {
@@ -38,7 +39,8 @@ function App() {
             <Routes>
               <Route path='/' element= {<IntroPage />}  />
               <Route path= '/projects' element = {<ProjectsPage />} />
-              <Route path= '/about' element={<About />} />
+              <Route path= '/about' element={<AboutPage />} />
+              <Route path = '/toolkit' element={<ToolkitPage />} />
 
             </Routes>
             
