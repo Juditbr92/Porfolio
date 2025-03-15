@@ -38,7 +38,7 @@ function Menu(props: MenuProps){
                                     <NavLink onClick={closeSidebar} className={`hover:underline hover:underline-offset-2 ${theme === "dark" ? "text-white hover:text-black": "text-black hover:text-white"}`} to="/">Inicio</NavLink>
                                     <NavLink onClick={closeSidebar} className={`hover:underline hover:underline-offset-2 ${theme === "dark" ? "text-white hover:text-black": "text-black hover:text-white"}`} to="/projects">Mis Proyectos</NavLink>
                                     <NavLink onClick={closeSidebar} className={`hover:underline hover:underline-offset-2 ${theme === "dark" ? "text-white hover:text-black" : "text-black hover:text-white"}`} to="/about">Sobre mí</NavLink>
-                                    <NavLink onClick={closeSidebar} className={`hover:underline hover:underline-offset-2 ${theme === "dark" ? "text-white hover:text-black" : "text-black hover:text-white"}`} to="">Mis herramientas</NavLink>
+                                    <NavLink onClick={closeSidebar} className={`hover:underline hover:underline-offset-2 ${theme === "dark" ? "text-white hover:text-black" : "text-black hover:text-white"}`} to="/toolkit">Mis herramientas</NavLink>
                                     <NavLink onClick={closeSidebar} className={`hover:underline hover:underline-offset-2 ${theme === "dark" ? "text-white hover:text-black" : "text-black hover:text-white"}`} to="">Contacto</NavLink>
                                 </div>
                             }
@@ -48,7 +48,7 @@ function Menu(props: MenuProps){
                                     <NavLink onClick={closeSidebar} className={`hover:underline hover:underline-offset-2 ${theme === "dark" ? "text-white hover:text-black": "text-black hover:text-white"}`} to="/">Home</NavLink>
                                     <NavLink onClick={closeSidebar} className={`hover:underline hover:underline-offset-2 ${theme === "dark" ? "text-white hover:text-black": "text-black hover:text-white"}`} to="/projects">Check my projects</NavLink>
                                     <NavLink onClick={closeSidebar} className={`hover:underline hover:underline-offset-2 ${theme === "dark" ? "text-white hover:text-black" : "text-black hover:text-white"}`} to="/about">About me</NavLink>
-                                    <NavLink onClick={closeSidebar} className={`hover:underline hover:underline-offset-2 ${theme === "dark" ? "text-white hover:text-black" : "text-black hover:text-white"}`} to="">My Toolkit</NavLink>
+                                    <NavLink onClick={closeSidebar} className={`hover:underline hover:underline-offset-2 ${theme === "dark" ? "text-white hover:text-black" : "text-black hover:text-white"}`} to="/toolkit">My Toolkit</NavLink>
                                     <NavLink onClick={closeSidebar} className={`hover:underline hover:underline-offset-2 ${theme === "dark" ? "text-white hover:text-black" : "text-black hover:text-white"}`} to="">Contact</NavLink>
                                 </div>
                             }

@@ -8,6 +8,7 @@ import { Route, Routes } from 'react-router-dom'
 import ProjectsPage from './pages/ProjectsPage'
 import AboutPage from './pages/AboutPage'
 import ToolkitPage from './pages/ToolkitPage'
+import Contact from './components/Contact/Contact'
 
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
               <Route path= '/projects' element = {<ProjectsPage />} />
               <Route path= '/about' element={<AboutPage />} />
               <Route path = '/toolkit' element={<ToolkitPage />} />
+              <Route path = "/contact" element = {<Contact />} />
 
             </Routes>
             
