@@ -1,10 +1,23 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
 import emailjs from '@emailjs/browser'
 import React from "react"
 import { toast } from "react-toastify"
+import { ThemeContext } from "../../context/ThemeProvider"
+import { LanguageContext } from "../../context/LanguageContext"
 
 
 function ContactForm(){
+
+    const {theme} = useContext(ThemeContext)
+    const {language} = useContext(LanguageContext)
+
+    const isDark = theme === 'dark'
+    const textColor = isDark ? 'text-white' : 'text-black'
+    const inputColor = isDark ? 'border-gray-500' : 'border-blue-300'
+    const btnColor = isDark ? 'hover:bg-gray-700 hover:text-white' : 'hover:bg-blue-300 hover:text-white'
+    const isSpanish = language === 'spanish'
+    const btnText = isSpanish ? 'Enviar' : 'Send'
+
     const [name, setName ] = useState('')
     const [email, setEmail] = useState('')
     const [message, setMessage] = useState('')
@@ -48,8 +61,8 @@ function ContactForm(){
                     <div className="flex flex-col gap-4">
                         <input 
                             placeholder= "Name"
-                            type="text"
-                            className="border-2 border-blue-300 rounded-2xl p-2"
+                            type="text" 
+                            className={`border-2  rounded-2xl p-2 ${inputColor} ${textColor} placeholder-gray-500`}
                             value = {name}
                             onChange={(e) => {setName(e.target.value)}}
                         />
@@ -57,20 +70,20 @@ function ContactForm(){
                         <input 
                             placeholder = "Email"
                             type= "email"
-                            className="border-2 border-blue-300 rounded-2xl p-2"
+                            className={`border-2  rounded-2xl p-2 ${inputColor} ${textColor} placeholder-gray-500`}
                             value = {email}
                             onChange={(e) => {setEmail(e.target.value)}}
                         />
 
                         <textarea  
-                            placeholder = "Mensaje"
-                            className="border-2 border-blue-300 rounded-2xl p-2 max-h-[150px] min-h-[140px]"
+                            placeholder = "Message"
+                            className={`border-2  rounded-2xl p-2 max-h-[150px] min-h-[140px] ${inputColor} ${textColor} placeholder-gray-500`}
                             value = {message}
                             onChange={(e) => {setMessage(e.target.value)}}
                         />
                     </div>
                     
-                    <button type= "submit" className="border-2 border-blue-500 mt-4 p-2 rounded-2xl w-1/2 hover:bg-blue-300 hover:text-white">Enviar</button>
+                    <button type= "submit" className={`border-2 mt-4 p-2 rounded-2xl w-1/2 " ${btnColor} ${inputColor} ${textColor}`}>{btnText}</button>
                 </div>
                 
             </form>
