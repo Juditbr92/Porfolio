@@ -9,6 +9,7 @@ import ProjectsPage from './pages/ProjectsPage'
 import AboutPage from './pages/AboutPage'
 import ToolkitPage from './pages/ToolkitPage'
 import Contact from './components/Contact/Contact'
+import { ToastContainer } from 'react-toastify'
 
 
 function App() {
@@ -47,6 +48,8 @@ function App() {
             </Routes>
             
             <Footer/>
+
+            <ToastContainer />
           </div>
           
           
