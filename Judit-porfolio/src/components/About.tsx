@@ -13,13 +13,13 @@ function About({theme, title, description}: AboutProps){
     
     return(
         <div className="flex align-middle">
-            <div className="flex flex-col justify-center pt-8 px-16 h-[80vh] w-1/2">
+            <div className="flex flex-col justify-center pt-8 ml-4 px-12 h-[80vh] w-1/2">
                 <h1>{title}</h1>
-                <p className={`text-lg mt-4 ${textColor}`}>{description}</p>
+                <p className={`text-md mt-4 leading-relaxed  ${textColor}`}>{description}</p>
             </div>
             
             <div className="flex justify-center items-center h-[80vh] w-1/2">
-                <img className= "h-[80%]" src="/foto.jpg" alt="Foto" />
+                <img className= "h-[80%] rounded-3xl" src="/foto.jpg" alt="Foto" />
             </div>
             
         </div>
