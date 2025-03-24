@@ -16,7 +16,15 @@ function ContactForm(){
     const inputColor = isDark ? 'border-gray-500' : 'border-blue-300'
     const btnColor = isDark ? 'hover:bg-gray-700 hover:text-white' : 'hover:bg-blue-300 hover:text-white'
     const isSpanish = language === 'spanish'
-    const btnText = isSpanish ? 'Enviar' : 'Send'
+    const text = isSpanish ?{
+        button: "Enviar", 
+        message: "Mensaje", 
+        name: "Nombre"
+    } : {
+        button: "Send",
+        message: "Message",
+        name: "Name"
+    }
 
     const [name, setName ] = useState('')
     const [email, setEmail] = useState('')
@@ -60,9 +68,9 @@ function ContactForm(){
                 <div className="flex flex-col">
                     <div className="flex flex-col gap-4">
                         <input 
-                            placeholder= "Name"
+                            placeholder= {text.name}
                             type="text" 
-                            className={`border-2  rounded-2xl p-2 ${inputColor} ${textColor} placeholder-gray-500`}
+                            className={`border-2  rounded-2xl p-2 ${inputColor} ${textColor} -placeholder-gray-500`}
                             value = {name}
                             onChange={(e) => {setName(e.target.value)}}
                         />
@@ -76,14 +84,14 @@ function ContactForm(){
                         />
 
                         <textarea  
-                            placeholder = "Message"
+                            placeholder = {text.message}
                             className={`border-2  rounded-2xl p-2 max-h-[150px] min-h-[140px] ${inputColor} ${textColor} placeholder-gray-500`}
                             value = {message}
                             onChange={(e) => {setMessage(e.target.value)}}
                         />
                     </div>
                     
-                    <button type= "submit" className={`border-2 mt-4 p-2 rounded-2xl w-1/2 " ${btnColor} ${inputColor} ${textColor}`}>{btnText}</button>
+                    <button type= "submit" className={`border-2 mt-4 p-2 rounded-2xl w-1/2 " ${btnColor} ${inputColor} ${textColor}`}>{text.button}</button>
                 </div>
                 
             </form>

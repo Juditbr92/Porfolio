@@ -1,20 +1,31 @@
 import { useContext } from "react"
 import ContactForm from "./ContactForm"
 import { ThemeContext } from "../../context/ThemeProvider"
+import { LanguageContext } from "../../context/LanguageContext"
 
 
 function Contact(){
 
     const {theme} = useContext(ThemeContext)
+    const {language} = useContext(LanguageContext)
+
     const isDark = theme === 'dark'
     const textColor = isDark ? 'text-white' : 'text-black'
+    const isSpanish = language === 'spanish'
+    const text = isSpanish ? {
+        heading: "¿Conectamos?",
+        description: "Si quieres conocer más sobre mí o sobre mi trabajo, puedes encontrarme en mis redes o enviarme un mensaje desde aquí 😊", 
+    } : {
+        heading: "Let's connect!",
+        description: "If you want to know anything else about me or about my work, you can find me on social media. Or you can send me a message here! 😊", 
+    }
 
     return(
-        <div className="h-[80vh] w-[90vw] flex flex-col mx-auto">
-            <h1 className="mt-8">¿Conectamos?</h1>
+        <div className="h-[75vh] w-[90vw] flex flex-col mx-auto mt-8">
+            <h1 className="mt-8 w-1/2">{text.heading}</h1>
             <div className="flex h-full gap-12">
-                <div className={`flex flex-col w-1/2 my-auto gap-y-10 ${textColor}`}>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque ab voluptates tempore ducimus fugiat aliquam autem necessitatibus numquam voluptas natus eius, repellat asperiores nemo cum quidem eos, nisi molestias temporibus.</p>
+                <div className={`flex flex-col w-1/2 justify-center items-start gap-y-10 ${textColor}`}>
+                    <p >{text.description}</p>
                     <div className="flex h-16 items-center justify-items-center mx-auto gap-8">
                         {
                             theme === 'light' && 
