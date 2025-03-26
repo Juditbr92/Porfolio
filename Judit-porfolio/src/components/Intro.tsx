@@ -30,11 +30,11 @@ function Intro({language, theme}: IntroProps){
         <div className="h-[80vh] flex items-center justify-center">
             <div className="flex flex-col w-3/4 items-center gap-y-12">
                 <div className="flex justify-between items-center w-full">
-                    <div className={`text-left ${textColor}`}>
+                    <div className={`text-left ${textColor}  xl:p-12`}>
                         <h1>{text.heading}</h1>
-                        <h3 className="whitespace-pre-line">{text.description}</h3>
+                        <h3 className="whitespace-pre-line xl:mt-12">{text.description}</h3>
                     </div>
-                    <div className="flex justify-items-end w-1/4">
+                    <div className="hidden md:flex justify-items-end w-1/4">
                         <img src="\myAvatar.svg" alt="Foto de avatar" className={imgClasses}/>
                     </div>
                 </div>

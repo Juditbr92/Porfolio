@@ -15,31 +15,30 @@ function ProjectCard({theme, img, title, description, technology, gitHub, video}
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         transition: 'all 0.3s ease-in-out',
-        minHeight: '300px', 
     };
 
     return(
-        <div>
+        <div className="min-h-[450px]">
         {/* Imagen de fondo */}
-            <div style={imgClass} className="relative">
+            <div style={imgClass} className="relative min-h-[300px] max-h-[500px] min-w-[450px] w-full sm:w-[450px] md:w-[500px] lg:w-[600px] xl:w-1/2 xl-h-[50vh] ">
                  {/* Capa negra semi-transparente al hacer hover */}
                 <div className={hover}></div>
             </div>
 
             {/* Contenido */}
-                <div className="absolute inset-0 flex flex-col text-xl items-center text-white opacity-0 group-hover:opacity-100 transition-opacity">
-                    <h2 className={`mt-6 text-3xl tracking-widest ${textColor}`}>{title}</h2>
-                    <p className={`text-sm mx-4 mt-4 text-center tracking-wide ${textColor}`}>{description}</p>
+                <div className="absolute inset-0 flex flex-col min-h-[350px] min-w-[500px] justify-top xl:justify-center items-center text-white opacity-0 group-hover:opacity-100 transition-opacity ">
+                    <h2 className={`mt-6 text-3xl tracking-widest break-words whitespace-normal text-center ${textColor}`}>{title}</h2>
+                    <p className={`text-sm lg:text-xl mx-4 mt-4 text-center tracking-wide break-words whitespace-normal ${textColor}`}>{description}</p>
                 
             {/* Tecnologias */}
-                <div className="flex gap-12 mt-8 text-sm">
+                <div className="flex gap-12 mt-8 text-sm 2xl:text-lg">
                     {technology.map((tech, index) => (
                         <p key = {index} className={technologyColor}> {tech}</p>
                     ))}        
                 </div>
 
             {/* Botones */}
-                <div className="flex gap-12 mt-4 text-md">
+                <div className="flex gap-12 mt-4 text-xs lg:text-xl">
                     <button className= {buttonColor}>
                         <a href={gitHub}>GitHub</a>
                     </button>

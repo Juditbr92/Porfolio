@@ -33,8 +33,8 @@ function ProjectsPage(){
     return(
         <div className="h-[80vh] w-full flex flex-col items-center">    
             {language === "spanish" && <h1>Mis Proyectos</h1> || language === "english" && <h1>My Projects</h1>}
-                <div className="flex w-full h-full gap-8 mt-8">
-                    <div className="h-2/3 w-1/2 mx-8 relative group">
+                <div className="flex flex-col justify-center items-center md:flex-row mt-4 gap-8">
+                    <div className="w-full md:w-1/2 px-4 relative group">
                         <ProjectCard
                             theme = {theme}
                             img={projectXperGG.img}
@@ -46,7 +46,7 @@ function ProjectsPage(){
                         />
                     </div>
 
-                    <div className="h-2/3 w-1/2 mx-8 relative group">
+                    <div className="w-full md:w-1/2 px-4 relative group">
                         <ProjectCard
                             theme = {theme}
                             img={projectMyBookShelf.img}
