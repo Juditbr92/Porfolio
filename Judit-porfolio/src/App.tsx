@@ -10,6 +10,7 @@ import AboutPage from './pages/AboutPage'
 import ToolkitPage from './pages/ToolkitPage'
 import ContactPage from './pages/ContactPage'
 import { ToastContainer } from 'react-toastify'
+import CV from './components/CV'
 
 
 
@@ -41,6 +42,7 @@ function App() {
             <div className='flex flex-grow items-center justify-center mt-12'></div>
             <Routes>
               <Route path='/' element= {<IntroPage />}  />
+              <Route path='/cv' element = {<CV />} />
               <Route path= '/projects' element = {<ProjectsPage />} />
               <Route path= '/about' element={<AboutPage />} />
               <Route path = '/toolkit' element={<ToolkitPage />} />
