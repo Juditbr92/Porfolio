@@ -1,6 +1,8 @@
 import { useContext } from "react"
-import { ThemeContext } from "../context/ThemeProvider"
-import { LanguageContext } from "../context/LanguageContext"
+import { ThemeContext } from "../../context/ThemeProvider"
+import { LanguageContext } from "../../context/LanguageContext"
+import { education } from "./Education"
+import { experience } from "./Experience"
 
 
 function CV(){
@@ -12,53 +14,6 @@ function CV(){
     const isDark = theme === 'dark'
     const textColor = isDark ? 'text-white' : 'text-black'
     const borderColor = isDark ? "border-white" : "border--black"
- 
-    const education = [
-        {   year: "2025",
-            titulo: "Curso React en Codenotch",
-            title: "REACT curse - Codenotch"
-        },
-        {   year: "2023-2024",
-            titulo: "Bootcamp Desarrollo Web Full Stack en Codenotch",
-            title: "Bootcamp Web Development Full Stack - Codenotch"
-        },
-        {   year: "2022",
-            titulo: "Tutorial JavaScript en Codecademy",
-            title: "JavaScript tutorial - Codecademy"
-        },
-        {   year: "2022",
-            titulo: "Tutorial Ruby en Codecademy",
-            title: "Ruby tutorial - Codecademy"
-        },
-        {   year: "2022",
-            titulo: "Tutoriales HTML y CSS en Codebar",
-            title: "HTML & CSS tutorials - Codebar"
-        }
-    ]
-
-    const experience = [
-        {
-            year: "2025",
-            title: "MyBookShelf",
-            titulo: "MyBookShelf",
-            descriptionSp: "Toma de decisiones, gestión del tiempo, resolución de problemas, aprendizaje",
-            descriptionEn: "Decision making, time management, problem-solving, learning by doing"
-        },
-        {
-            year: "2024",
-            title: "XperGG",
-            titulo: "XperGG",
-            descriptionSp: "Comunicación, trabajo en equipo, gestión del estrés, empatía y adaptabilidad",
-            descriptionEn: "Communication, teamwork, stress management, empathy and adaptability"
-        },
-        {
-            year: "2014-2025",
-            title: "Physiotherapist",
-            titulo: "Fisioterapeuta",
-            descriptionSp: "Comunicación, trabajo en equipo, resolución de problemas, empatía, gestión del tiempo y adaptabilidad",
-            descriptionEn: "Communication, teamwork, problem-solving, empathy, time management and adaptability"
-        }
-    ]
 
     return(
         <div className="h-[80vh]">

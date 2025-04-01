@@ -10,7 +10,8 @@ function ProjectsPage(){
     const { language } = useContext(LanguageContext)
     const { theme } = useContext(ThemeContext)
 
-    const projectXperGG = {
+    const projects = [
+        {
         img: "/XperGG.png",
         title: "XperGG",
         description: language === 'spanish' ? "Red social centrada en los videojuegos. En la que puedes crear tu perfil para subir vídeos de tus mejores jugadas y comentar en las publicaciones de otros miembros. Además en el apartado 'hilos' podrás resolver todas tus dudas y proponer partidas." :
@@ -18,9 +19,8 @@ function ProjectsPage(){
         technology: ["Angular", "Bootstrap", "MySQL"],
         gitHub: "https://github.com/tony1693/xpergg-front",
         video: "https://youtu.be/DcgEn2Jz-bE"
-    };
-
-    const projectMyBookShelf = {
+    },
+    {   
         img: "/MyBookShelf.png",
         title: "MyBookShelf",
         description: language === 'spanish' ? "Aplicación para organizar y guardar tus lecturas. Puntúa los libros y guarda tus notas para revisar siempre que quieras" : "A desktop app to organize and save all your reads. Rate your books and keep track of them for whenever you want to revisit",
@@ -28,38 +28,31 @@ function ProjectsPage(){
         gitHub: "https://github.com/Juditbr92/MyBookShelf",
         video: "https://youtu.be/Oyz7XCswoqY"
     }
+    ]
+    
 
 
     return(
-        <div className="h-[80vh] w-full flex flex-col items-center">    
-            {language === "spanish" && <h1>Mis Proyectos</h1> || language === "english" && <h1>My Projects</h1>}
-                <div className="flex flex-col justify-center items-center md:flex-row mt-4 gap-8">
-                    <div className="w-full md:w-1/2 px-4 relative group">
-                        <ProjectCard
-                            theme = {theme}
-                            img={projectXperGG.img}
-                            title={projectXperGG.title}
-                            description={projectXperGG.description}
-                            technology={projectXperGG.technology}
-                            gitHub= {projectXperGG.gitHub}
-                            video = {projectXperGG.video}
-                        />
-                    </div>
-
-                    <div className="w-full md:w-1/2 px-4 relative group">
-                        <ProjectCard
-                            theme = {theme}
-                            img={projectMyBookShelf.img}
-                            title={projectMyBookShelf.title}
-                            description={projectMyBookShelf.description}
-                            technology={projectMyBookShelf.technology}
-                            gitHub= {projectMyBookShelf.gitHub}
-                            video = {projectMyBookShelf.video}
-                        />
-                    </div>
-            </div>
-    </div>
-
+        <div className="w-full flex flex-col flex-grow border-2 md:border-orange-400 lg:border-green xl:border-black 2xl:border-purple-500">    
+            {language === "spanish" && <h1 className="text-center mt-20 ml-12 sm:mt-22">Mis Proyectos</h1> || language === "english" && <h1>My Projects</h1>}
+                <div className="flex flex-wrap justify-center gap-8 mt-4">
+                    
+                        {projects.map(project => {
+                            return(
+                                <div className="w-full md:w-[45%] px-4 relative group">
+                                    <ProjectCard 
+                                        theme = {theme}
+                                        img = {project.img}
+                                        title = {project.title}
+                                        description = {project.description}
+                                        technology={project.technology}
+                                        gitHub={project.gitHub}
+                                        video = {project.video}/>
+                                </div>
+                            )
+                        })}
+                </div>
+        </div>
     )
 }
 

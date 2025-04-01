@@ -10,7 +10,7 @@ import AboutPage from './pages/AboutPage'
 import ToolkitPage from './pages/ToolkitPage'
 import ContactPage from './pages/ContactPage'
 import { ToastContainer } from 'react-toastify'
-import CV from './components/CV'
+import CV from './components/CV/CV'
 
 
 
@@ -18,7 +18,7 @@ function App() {
   const { theme } = useContext(ThemeContext)
 
   return (
-        <div>
+        <div className="relative min-h-screen flex flex-col">
         {/* Fondo para modo light */}
           {theme === 'light' && 
             <div className="fixed inset-0 z-0 h-full w-full bg-[#fafafa]">
@@ -39,24 +39,22 @@ function App() {
             <Header /> 
           
           {/* Main part of the APP */}
-            <div className='flex flex-grow items-center justify-center mt-12'></div>
-            <Routes>
-              <Route path='/' element= {<IntroPage />}  />
-              <Route path='/cv' element = {<CV />} />
-              <Route path= '/projects' element = {<ProjectsPage />} />
-              <Route path= '/about' element={<AboutPage />} />
-              <Route path = '/toolkit' element={<ToolkitPage />} />
-              <Route path = "/contact" element = {<ContactPage />} />
+            <main className='flex-grow w-full'>
+              <Routes>
+                <Route path='/' element= {<IntroPage />}  />
+                <Route path='/cv' element = {<CV />} />
+                <Route path= '/projects' element = {<ProjectsPage />} />
+                <Route path= '/about' element={<AboutPage />} />
+                <Route path = '/toolkit' element={<ToolkitPage />} />
+                <Route path = "/contact" element = {<ContactPage />} />
+              </Routes>
 
-            </Routes>
+            </main> 
             
             <Footer/>
 
             <ToastContainer />
           </div>
-          
-          
-        
         </div>
   
   )
