@@ -14,10 +14,10 @@ export const experience = [
             descriptionEn: "Communication, teamwork, stress management, empathy and adaptability"
         },
         {
-            year: "2014-2025",
+            year: "2014 2025",
             title: "Physiotherapist",
             titulo: "Fisioterapeuta",
-            descriptionSp: "Comunicación, trabajo en equipo, ingles, resolución de problemas, empatía, gestión del tiempo y adaptabilidad",
+            descriptionSp: "Comunicación, trabajo en equipo, inglés, resolución de problemas, empatía, gestión del tiempo y adaptabilidad",
             descriptionEn: "Communication, teamwork, English, problem-solving, empathy, time management and adaptability"
         }
     ]
