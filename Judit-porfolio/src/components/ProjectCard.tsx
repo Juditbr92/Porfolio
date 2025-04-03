@@ -18,27 +18,27 @@ function ProjectCard({theme, img, title, description, technology, gitHub, video}
     };
 
     return(
-        <div className="min-h-[450px]">
+        <div className="min-h-[450px] w-full">
         {/* Imagen de fondo */}
-            <div style={imgClass} className="relative min-h-[300px] max-h-[300px] min-w-[300px] w-full sm:w-[600px] sm:mx-auto  md:w-[500px] lg:w-[600px] xl:w-1/2 xl-h-[50vh] ">
+            <div style={imgClass} className="relative min-h-[300px] max-h-[300px] min-w-[300px] w-screen sm:w-[600px] sm:mx-auto md:w-[650px] lg:w-[650px] xl:w-[600px] xl:h-[50vh] 2xl:min-w-[750px] 2xl:min-h-[370px] ">
                  {/* Capa negra semi-transparente al hacer hover */}
                 <div className={hover}></div>
             </div>
 
             {/* Contenido */}
-                <div className="absolute inset-0 flex flex-col min-h-[350px] min-w-[500px] justify-top xl:justify-center items-center text-white opacity-0 group-hover:opacity-100 transition-opacity ">
-                    <h2 className={`mt-6 text-3xl tracking-widest break-words whitespace-normal text-center ${textColor}`}>{title}</h2>
-                    <p className={`max-w-[380px] text-center tracking-wide break-words whitespace-normal text-sm mr-0 mt-2 sm:max-w-[550px] sm:mt-4 sm:mb-4 lg:text-xl mx-4   ${textColor}`}>{description}</p>
+                <div className="absolute inset-0 flex flex-col min-h-[350px] min-w-[500px] justify-top items-center text-white opacity-0 group-hover:opacity-100 transition-opacity ">
+                    <h2 className={`mt-6 text-2xl xl:text-3xl 2xl:text-4xl tracking-widest break-words whitespace-normal text-center ${textColor}`}>{title}</h2>
+                    <p className={`max-w-[380px] text-center tracking-wide break-words whitespace-normal text-sm mr-0 mt-2 sm:max-w-[550px] sm:mt-4 sm:mb-4 lg:text-md 2xl:text-xl 2xl:min-w-[650px] ${textColor}`}>{description}</p>
                 
             {/* Tecnologias */}
-                <div className="flex gap-12 mt-6 text-sm sm:text-md 2xl:text-lg">
+                <div className="flex gap-12 mt-6 text-sm sm:text-md lg:text-md">
                     {technology.map((tech, index) => (
                         <p key = {index} className={technologyColor}> {tech}</p>
                     ))}        
                 </div>
 
             {/* Botones */}
-                <div className="flex gap-12 mt-4 text-sm lg:text-xl">
+                <div className="flex gap-12 mt-4 text-sm lg:text-lg">
                     <button className= {buttonColor}>
                         <a href={gitHub}>GitHub</a>
                     </button>

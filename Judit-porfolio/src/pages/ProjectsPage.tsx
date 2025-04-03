@@ -33,13 +33,13 @@ function ProjectsPage(){
 
 
     return(
-        <div className="w-full flex flex-col flex-grow border-2 md:border-orange-400 lg:border-green xl:border-black 2xl:border-purple-500">    
-            {language === "spanish" && <h1 className="text-center mt-20 ml-12 sm:mt-22">Mis Proyectos</h1> || language === "english" && <h1>My Projects</h1>}
-                <div className="flex flex-wrap justify-center gap-8 mt-4">
+        <div className="w-full flex flex-col flex-grow 2xl:min-h-[90vh]">    
+            {language === "spanish" && <h1 className="text-center mt-20 ml-12 sm:mt-22 xl:mb-8 2xl:mt-30 2xl:mb-20">Mis Proyectos</h1> || language === "english" && <h1>My Projects</h1>}
+                <div className="flex flex-wrap justify-center xl:justify-between gap-8 xl:gap-4 mt-4">
                     
                         {projects.map(project => {
                             return(
-                                <div className="w-full md:w-[45%] px-4 relative group">
+                                <div className="px-4 relative group xl:w-[48%] xl:px-0">
                                     <ProjectCard 
                                         theme = {theme}
                                         img = {project.img}

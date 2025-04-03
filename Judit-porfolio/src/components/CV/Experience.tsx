@@ -17,7 +17,7 @@ export const experience = [
             year: "2014-2025",
             title: "Physiotherapist",
             titulo: "Fisioterapeuta",
-            descriptionSp: "Comunicación, trabajo en equipo, resolución de problemas, empatía, gestión del tiempo y adaptabilidad",
-            descriptionEn: "Communication, teamwork, problem-solving, empathy, time management and adaptability"
+            descriptionSp: "Comunicación, trabajo en equipo, ingles, resolución de problemas, empatía, gestión del tiempo y adaptabilidad",
+            descriptionEn: "Communication, teamwork, English, problem-solving, empathy, time management and adaptability"
         }
     ]
