@@ -21,10 +21,10 @@ function Contact(){
     }
 
     return(
-        <div className="h-[75vh] w-[90vw] flex flex-col mx-auto mt-8">
-            <h1 className="mt-8 w-1/2">{text.heading}</h1>
-            <div className="flex h-full gap-12">
-                <div className={`flex flex-col w-1/2 justify-center items-start gap-y-10 ${textColor}`}>
+        <div className="h-full w-full flex flex-col mx-auto">
+            <h1 className="mt-20 mx-auto md:ml-20">{text.heading}</h1>
+            <div className="flex flex-col sm:flex-wrap h-full xl:h-[50vh] gap-12 items-center sm:space-between mt-12 md:flex-row md:flex-nowrap 2xl:justify-between">
+                <div className={`flex flex-col mx-12 justify-center items-start gap-y-10 ${textColor} lg:max-w-[550px]`}>
                     <p >{text.description}</p>
                     <div className="flex h-16 items-center justify-items-center mx-auto gap-8">
                         {
@@ -57,7 +57,7 @@ function Contact(){
                     </div>
                 </div>
 
-                <div className="flex flex-col w-1/2">
+                <div className="flex flex-col w-1/2 mb-12 md:mr-8">
                     <ContactForm />
                 </div>
             </div>
