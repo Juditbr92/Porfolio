@@ -31,7 +31,7 @@ function ProjectCard({theme, img, title, description, technology, gitHub, video}
                     <p className={`max-w-[380px] text-center tracking-wide break-words whitespace-normal text-sm mr-0 mt-2 sm:max-w-[550px] sm:mt-4 sm:mb-4 lg:text-md 2xl:text-xl 2xl:min-w-[550px] ${textColor}`}>{description}</p>
                 
             {/* Tecnologias */}
-                <div className="flex gap-6 mt-6 text-sm sm:text-md lg:text-md">
+                <div className="flex gap-16 mt-6 text-sm sm:text-md lg:text-md">
                     {technology.map((tech, index) => (
                         <p key = {index} className={technologyColor}> {tech}</p>
                     ))}        
