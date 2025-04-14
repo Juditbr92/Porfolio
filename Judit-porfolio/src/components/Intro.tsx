@@ -27,9 +27,9 @@ function Intro({language, theme}: IntroProps){
     const imgClasses = "w-full border-2 rounded-full border-blue-400 bg-blue-200 ml-12 place-self-end"
 
     return( 
-        <div className="h-[80vh] flex items-center justify-center">
-            <div className="flex flex-col w-3/4 items-center gap-y-12">
-                <div className="flex justify-between items-center w-full">
+        <div className="h-full flex items-center justify-center">
+            <div className="h-full mx-auto my-auto flex flex-col w-3/4 items-center gap-y-12">
+                <div className="h-full mt-20 flex justify-between items-center w-full">
                     <div className={`text-left ${textColor}  xl:p-12`}>
                         <h1>{text.heading}</h1>
                         <h3 className="whitespace-pre-line xl:mt-12">{text.description}</h3>
